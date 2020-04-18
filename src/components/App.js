@@ -1,6 +1,7 @@
 import React from 'react';
 import Recipelist from './RecipeList'
 import Ingredient from './Ingredient';
+import '../css/app.css'
 
 function App() {
   return (
