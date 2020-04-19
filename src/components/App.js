@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Recipelist from './RecipeList'
+import RecipeEdit from './RecipeEdit'
 import '../css/app.css'
 import uuidv4 from 'uuid/v4'
 
@@ -45,6 +46,7 @@ function App() {
   return (
     <RecipeContext.Provider value = {RecipeContextValue}>
        <Recipelist recipes = {recipes}/>
+       <RecipeEdit/>
       </RecipeContext.Provider>
 
   )
