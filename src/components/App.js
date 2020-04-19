@@ -26,6 +26,7 @@ function App() {
     handleRecipeAdd,
     handleRecipeDelete,
     handleRecipeSelect,
+    handleRecipeChange,
   }
   function handleRecipeSelect(id) {
     setSelectedRecipeId(id)
@@ -45,6 +46,13 @@ function App() {
     }
     setRecipes([...recipes, newRecipe])
   }
+  function handleRecipeChange(id, recipe) {
+    const newRecipes = [...recipes]
+    const index = newRecipes.findIndex(r => r.id === id)
+    newRecipes[index] = recipe
+    setRecipes(newRecipes)
+  }
+
   function handleRecipeDelete(id) {
     setRecipes(recipes.filter(recipe => recipe.id !== id ))
   }
